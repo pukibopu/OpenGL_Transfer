@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		27C772DA290BAC82006C8A20 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27C772D9290BAC82006C8A20 /* main.cpp */; };
+		27C772E1290BAC99006C8A20 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 27C772E0290BAC99006C8A20 /* glad.c */; };
+		27C772E4290BAD16006C8A20 /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C772E3290BAD16006C8A20 /* libglfw.3.dylib */; };
+		27C772E5290BAD16006C8A20 /* libglfw.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 27C772E3290BAD16006C8A20 /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		27C772E8290BAD38006C8A20 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C772E7290BAD2C006C8A20 /* libglfw3.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,11 +24,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		27C772E6290BAD16006C8A20 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				27C772E5290BAD16006C8A20 /* libglfw.3.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		27C772D6290BAC82006C8A20 /* Transfer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Transfer; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C772D9290BAC82006C8A20 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		27C772E0290BAC99006C8A20 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad.c; path = ../openGL_cpp/libs/glad.c; sourceTree = "<group>"; };
+		27C772E3290BAD16006C8A20 /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = ../openGL_cpp/libs/libglfw.3.dylib; sourceTree = "<group>"; };
+		27C772E7290BAD2C006C8A20 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = ../openGL_cpp/libs/libglfw3.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C772E4290BAD16006C8A20 /* libglfw.3.dylib in Frameworks */,
+				27C772E8290BAD38006C8A20 /* libglfw3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +61,10 @@
 		27C772CD290BAC82006C8A20 = {
 			isa = PBXGroup;
 			children = (
+				27C772E0290BAC99006C8A20 /* glad.c */,
 				27C772D8290BAC82006C8A20 /* Transfer */,
 				27C772D7290BAC82006C8A20 /* Products */,
+				27C772E2290BAD16006C8A20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +84,15 @@
 			path = Transfer;
 			sourceTree = "<group>";
 		};
+		27C772E2290BAD16006C8A20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27C772E7290BAD2C006C8A20 /* libglfw3.a */,
+				27C772E3290BAD16006C8A20 /* libglfw.3.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -72,6 +103,7 @@
 				27C772D2290BAC82006C8A20 /* Sources */,
 				27C772D3290BAC82006C8A20 /* Frameworks */,
 				27C772D4290BAC82006C8A20 /* CopyFiles */,
+				27C772E6290BAD16006C8A20 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -120,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27C772DA290BAC82006C8A20 /* main.cpp in Sources */,
+				27C772E1290BAC99006C8A20 /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +272,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /Users/j10j0/Desktop/openGL_cpp/include;
+				LIBRARY_SEARCH_PATHS = /Users/j10j0/Desktop/openGL_cpp/libs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +282,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /Users/j10j0/Desktop/openGL_cpp/include;
+				LIBRARY_SEARCH_PATHS = /Users/j10j0/Desktop/openGL_cpp/libs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
