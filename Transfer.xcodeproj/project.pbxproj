@@ -43,6 +43,10 @@
 		27C772E0290BAC99006C8A20 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad.c; path = ../openGL_cpp/libs/glad.c; sourceTree = "<group>"; };
 		27C772E3290BAD16006C8A20 /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = ../openGL_cpp/libs/libglfw.3.dylib; sourceTree = "<group>"; };
 		27C772E7290BAD2C006C8A20 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = ../openGL_cpp/libs/libglfw3.a; sourceTree = "<group>"; };
+		27C772EB290BD25A006C8A20 /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
+		27C772EC290BD25A006C8A20 /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
+		27C772ED290BD2AC006C8A20 /* fShader.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fShader.fs; sourceTree = "<group>"; };
+		27C772EE290BD2AC006C8A20 /* vShader.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = vShader.vs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 		27C772D8290BAC82006C8A20 /* Transfer */ = {
 			isa = PBXGroup;
 			children = (
+				27C772EA290BD227006C8A20 /* resources */,
+				27C772E9290BD210006C8A20 /* shaders */,
 				27C772D9290BAC82006C8A20 /* main.cpp */,
 			);
 			path = Transfer;
@@ -91,6 +97,24 @@
 				27C772E3290BAD16006C8A20 /* libglfw.3.dylib */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27C772E9290BD210006C8A20 /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				27C772ED290BD2AC006C8A20 /* fShader.fs */,
+				27C772EE290BD2AC006C8A20 /* vShader.vs */,
+			);
+			path = shaders;
+			sourceTree = "<group>";
+		};
+		27C772EA290BD227006C8A20 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				27C772EB290BD25A006C8A20 /* awesomeface.png */,
+				27C772EC290BD25A006C8A20 /* container.jpg */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
